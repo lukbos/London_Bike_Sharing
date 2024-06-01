@@ -7,31 +7,6 @@
 
 **3.** Create impactful visualisations in Tableau
 
-## Objectives
-What types of Businesses would find this data useful? 
-- Health companies
-- Bike Companies:
-    - retail (brick and mortar)
-    - rental services (lime scooters & bikes) 
-## What types of insights would businesses find value? 
-
-## Conclusion
-Some of the trends found within the data were as predicted. Cycling activities were significantly lower during rainy days, most likely due to less pleasant and dangerous riding conditions. However seasonal data indicates biking activities were consistent all year round, indicating that raining days were evenly distributed throughout each season.
-### Further Analysis Ideas
-Conducting further analysis would depend on the clients needs. Consequently what types of Businesses would find this data useful? 
-### Health companies
-Understanding fitness levels and health needs of the population
-- Distances travelled
-- Demographic: Age, gender, race
-- Qualitative data regardings peoples reasons to not walk or bike to work (driving kids to school on the way to work, feeling unsafe etc.)
-### Bike Companies:
-#### Retail (brick and mortar) and Rental services (lime scooters & bikes)
-Bike companies will find value in data related to targeting the right market
-- Biking hotspots in london
-- Typical routes 
-- Data for other transport methods
-    - i.e. trains and cars/ taxis, trying to acquire these users or create transport styles that incorporate some form of passive fitness
-
 ## Data source via Kaggle
 - [london-bike-sharing-dataset](https://www.kaggle.com/datasets/hmavrodiev/london-bike-sharing-dataset)
 - Via Uk Govt: [Https://cycling.data.tfl.gov.uk/]
@@ -50,3 +25,78 @@ Python dictionaries were made using the following metadata and referenced to mak
 - "season" - category field meteorological seasons: 0-spring ; 1-summer; 2-fall; 3-winter
 - "weathe_code" category description:
 1 = Clear ; mostly clear but have some values with haze/fog/patches of fog/ fog in vicinity 2 = scattered clouds / few clouds 3 = Broken clouds 4 = Cloudy 7 = Rain/ light Rain shower/ Light rain 10 = rain with thunderstorm 26 = snowfall 94 = Freezing Fog
+
+# Analysis
+## Tableau Dashboard
+### 5 visualizations
+Highlighting data with most valuable insights
+- **Total Bike Rides Count** (To understand sample size)
+- **Moving Averages chart** (To guage the most recent riding trends)
+    - **Rides split by weather and hour**
+        - This graph is only presented when interacting with Moving averages line graph
+- **Temperature vs Windspeed heatmap** (to discover how weather influences riding frequencies)
+    - **Rides split by weather and hour**
+            - This graph is only presented when interacting with heatmap
+- **User Defined parameters**
+    - Filtering data for specific time periods to explore moving averages
+*Interactive graphs were added so the initial dashboard not crowded with information, consequently is easily interpretable. For stakeholders convenience the interactive graphs add the ability to dive deeper into the details while referencing the main graphs*
+
+[My London Bike Sharing Data Dashboard](https://public.tableau.com/views/LondonBikeSharingDataSet/LondonBikeShare?:language=en-GB&:sid=9CBC8CE109EF4E6E80D7873A92AD0D6C-0:0&:display_count=n&:origin=viz_share_link) 
+
+![alt text](LondonBikeShare.png)
+Interactive Display using Tableau's 'tooltip' feature
+![alt text](LondonBikeShare-Interactive.png)
+
+## Bike Sharing User Activity and Weather Trends
+
+This report analyzes user activity in London's bike sharing program and its correlation with weather conditions.
+
+### Seasonal Trends
+- A strong correlation between weather and bike usage is evident on the interactive heatmap.
+- Bike usage is highest in spring and summer, aligning with better weather conditions.
+- Conversely, usage is very low during fall and winter months.
+
+### Year-over-Year Trends
+- The heatmap analysis reveals consistent bike sharing activity across the years studied, with no significant increase or decrease.
+
+### Weather Impact
+- The heatmap indicates significantly higher activity during specific weather conditions:
+  - Wind speeds between 7.15 - 24.99 kph
+  - Temperatures between 9.96 - 19.92 °C
+
+### Cloud Cover Preference
+- The moving average line graph suggests cyclists favor clear or varied cloud cover conditions, regardless of the season.
+
+### Impact of Weather on Seasonality (Assumption)
+- Assuming London did not experience a dry year, this data strongly suggests users prefer cycling in summer-like weather over winter conditions.
+
+### Peak Biking Periods
+- Peak biking periods tend to fall within two timeframes:
+  - Between 07:00-09:00
+  - Between 17:00-20:00
+
+### Rush Hour Correlation
+- This data aligns with higher bike sharing activity during rush hours.
+
+## Future Analysis Recommendations
+- To gain a more granular understanding of user behavior, analyzing individual user activity would be beneficial.
+- This analysis could reveal patterns across the week:
+  - Identifying consistently active riders
+  - Determining if weather and other factors (laziness, working from home) influence individual riding habits
+
+### Application
+Conducting further analysis would depend on the clients needs. Consequently what types of Businesses would find this data useful? 
+### Health companies
+Understanding fitness levels and health needs of the population
+- Distances travelled
+- Demographic: Age, gender, race
+- Qualitative data regardings peoples reasons to not walk or bike to work (driving kids to school on the way to work, feeling unsafe etc.)
+### Bike Companies:
+- retail (brick and mortar)
+- rental services (lime scooters & bikes) 
+#### Retail (brick and mortar) and Rental services (lime scooters & bikes)
+Bike companies will find value in data related to targeting the right market
+- Biking hotspots in london
+- Typical routes 
+- Data for other transport methods
+    - i.e. trains and cars/ taxis, trying to acquire these users or create transport styles that incorporate some form of passive fitness
